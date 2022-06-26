@@ -1,7 +1,7 @@
 import React from "react";
 import "./ColorBox.css";
 
-export const ColorBox = ({ color, onDelete }) => {
+export const ColorBox = ({ color, onDelete, onChange }) => {
   const handleClick = () => {
     navigator.clipboard
       .writeText(color)
@@ -23,6 +23,9 @@ export const ColorBox = ({ color, onDelete }) => {
       <input
         type="text"
         value={color}
+        onChange={(event) => {
+          onChange(event.target.value);
+        }}
         onClick={(event) => {
           event.stopPropagation();
         }}

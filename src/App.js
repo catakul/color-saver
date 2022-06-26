@@ -15,6 +15,17 @@ function App() {
     setColors(colors.filter((color) => color.id !== id));
   };
 
+  const handleChangeColor = (id, code) => {
+    setColors(
+      colors.map((color) => {
+        return {
+          ...color,
+          code: color.id === id ? code : color.code,
+        };
+      })
+    );
+  };
+
   return (
     <div className="App">
       <h1>Color Saver Step 0</h1>
@@ -27,6 +38,9 @@ function App() {
               key={color.id}
               onDelete={() => {
                 handleDeleteColor(color.id);
+              }}
+              onChange={(code) => {
+                handleChangeColor(color.id, code);
               }}
             />
           );
