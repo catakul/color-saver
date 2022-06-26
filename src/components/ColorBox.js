@@ -1,7 +1,7 @@
 import React from "react";
 import "./ColorBox.css";
 
-export const ColorBox = ({ color }) => {
+export const ColorBox = ({ color, onDelete }) => {
   const handleClick = () => {
     navigator.clipboard
       .writeText(color)
@@ -31,6 +31,7 @@ export const ColorBox = ({ color }) => {
         className="color-box__delete"
         onClick={(event) => {
           event.stopPropagation();
+          onDelete();
         }}
       >
         X
