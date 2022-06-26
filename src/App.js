@@ -11,7 +11,7 @@ function App() {
     setColors([{ id: nanoid(), code }, ...colors]);
   };
 
-  const deleteColor = (id) => {
+  const handleDeleteColor = (id) => {
     setColors(colors.filter((color) => color.id !== id));
   };
 
@@ -26,7 +26,7 @@ function App() {
               color={color.code}
               key={color.id}
               onDelete={() => {
-                deleteColor(color.id);
+                handleDeleteColor(color.id);
               }}
             />
           );
