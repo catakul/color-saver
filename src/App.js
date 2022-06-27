@@ -29,7 +29,12 @@ function App() {
   return (
     <div className="App">
       <h1>Color Saver Step 9</h1>
+      <small>
+        Fetch color names from{" "}
+        <a href="https://www.thecolorapi.com/">Color API</a>
+      </small>
       <ColorForm onSubmit={handleAddColor} />
+
       <div className="card-grid">
         {colors.map((color) => {
           return (
