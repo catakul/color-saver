@@ -20,7 +20,7 @@ const colors = [
 function App() {
   return (
     <div className="App">
-      <h1>Color Saver Step 0</h1>
+      <h1>Color Saver Step 4</h1>
       <ColorForm />
       <div className="card-grid">
         {colors.map((color) => {
