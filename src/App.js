@@ -20,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <h1>Color Saver Step 2</h1>
+      <small>Generate ColorBox components from static array</small>
       <div className="card-grid">
         {colors.map((color) => {
           return <ColorBox color={color.code} key={color.id} />;
