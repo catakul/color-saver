@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <h1>Color Saver Step 1</h1>
+      <small>ColorBox Component</small>
       <div className="card-grid">
         <ColorBox color="#f00" />
         <ColorBox color="#0f0" />
