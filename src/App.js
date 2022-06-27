@@ -19,7 +19,7 @@ const colors = [
 function App() {
   return (
     <div className="App">
-      <h1>Color Saver Step 1</h1>
+      <h1>Color Saver Step 2</h1>
       <div className="card-grid">
         {colors.map((color) => {
           return <ColorBox color={color.code} key={color.id} />;
