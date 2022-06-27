@@ -1,5 +1,4 @@
 import "./App.css";
-import { useState } from "react";
 import { nanoid } from "nanoid";
 import { ColorBox } from "./components/ColorBox";
 import { ColorForm } from "./components/ColorForm";
