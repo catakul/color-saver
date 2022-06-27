@@ -1,15 +1,23 @@
-import React from "react";
+import { useState } from "react";
 import "./ColorBox.css";
 
 export const ColorBox = ({ color, onDelete, onChange }) => {
+  const [message, setMessage] = useState(null);
+
   const handleClick = () => {
     navigator.clipboard
       .writeText(color)
       .then(() => {
-        alert("Copied");
+        setMessage("Copied!");
+        setTimeout(() => {
+          setMessage(null);
+        }, 2000);
       })
       .catch((err) => {
-        alert("Copy failed");
+        setMessage("Copy failed :-(");
+        setTimeout(() => {
+          setMessage(null);
+        }, 2000);
       });
   };
   return (
@@ -39,6 +47,9 @@ export const ColorBox = ({ color, onDelete, onChange }) => {
       >
         X
       </div>
+      {message ? (
+        <div className="color-box__message">{message}</div>
+      ) : undefined}
     </div>
   );
 };
