@@ -21,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <h1>Color Saver Step 4</h1>
+      <small>ColorForm component (no functionality)</small>
       <ColorForm />
       <div className="card-grid">
         {colors.map((color) => {
