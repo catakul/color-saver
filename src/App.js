@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Color Saver Step 0</h1>
+      <h1>Color Saver Step 6</h1>
       <ColorForm onSubmit={handleAddColor} />
       <div className="card-grid">
         {colors.map((color) => {
