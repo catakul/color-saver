@@ -20,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <h1>Color Saver Step 3</h1>
+      <small>Copy color value to clipboard</small>
       <div className="card-grid">
         {colors.map((color) => {
           return <ColorBox color={color.code} key={color.id} />;
