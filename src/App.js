@@ -3,9 +3,10 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import { ColorBox } from "./components/ColorBox";
 import { ColorForm } from "./components/ColorForm";
+import { usePersistentState } from "./hooks/use-persistent-state";
 
 function App() {
-  const [colors, setColors] = useState([]);
+  const [colors, setColors] = usePersistentState("color-list", []);
 
   const handleAddColor = (code) => {
     setColors([{ id: nanoid(), code }, ...colors]);
@@ -28,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Color Saver Step 0</h1>
+      <h1>Color Saver Step 9</h1>
       <ColorForm onSubmit={handleAddColor} />
       <div className="card-grid">
         {colors.map((color) => {
