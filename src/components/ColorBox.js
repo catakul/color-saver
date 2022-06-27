@@ -47,9 +47,7 @@ export const ColorBox = ({ color, onDelete, onChange }) => {
       >
         X
       </div>
-      {message ? (
-        <div className="color-box__message">{message}</div>
-      ) : undefined}
+      {message && <div className="color-box__message">{message}</div>}
     </div>
   );
 };
